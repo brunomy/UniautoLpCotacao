@@ -1,0 +1,340 @@
+footer{
+    background: #0016AD;
+    padding: 80px 0 0;
+    
+    >.content{
+        .top_content{
+            padding: 0 0 45px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            
+            .pages{
+                width: 900px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                
+                >div{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    h2{
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #fff;
+                        margin: 0 0 10px;
+                    }
+                    a, button{
+                        text-align: left;
+                        text-transform: none;
+                        padding: 0;
+                        min-width: initial;
+                        font-size: 14px;
+                        color: #fff;
+                    }
+
+                }
+                .contact{
+                    display: flex;
+                    gap: 10px;
+
+                    a, button{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        padding: 0 0 0 30px;
+
+                        h3{
+                            font-weight: 100;
+                            font-size: 12px;
+                            color: #fff;
+                            margin: 0 0 -5px;
+                        }
+                        span{
+                            position: relative;
+                            font-weight: bold;
+                            font-size: 18px;
+                            color: #fff;
+
+                            svg{
+                                position: absolute;
+                                left: -7px;
+                                top: 50%;
+                                transform: translate(-100%, -50%);
+                            }
+                        }
+                    }
+                }
+            }
+            >a, >button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #004AAD;
+                width: 170px;
+                height: 45px;
+                border-radius: 5px;
+                font-size: 14px;
+                color: #fff;
+                font-weight: 600;
+                text-transform: none;
+            }
+        }
+        .botton_content{
+            border-top: 1px solid rgba(255, 255, 255, .21);
+            padding: 45px 0 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .left{
+                width: 670px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                img{
+                    &.uniauto{}
+                    &.fan{}
+                    &.aaapv{}
+                }
+            }
+            .right{
+                width: 470px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .store{
+                    width: 304px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    a, button{
+                        padding: 0;
+
+                        img{}
+                    }
+                }
+                .social{
+                    width: 150px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    a, button{
+                        width: 42px;
+                        height: 42px;
+                        min-width: initial;
+                        border-radius: 50%;
+                        background: #162FDA;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        svg{}
+                    }
+                }
+            }
+        }
+    }
+    .privacy_policy{
+        background: #00128A;
+        padding: 11px 0;
+
+        .content{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p{
+                font-size: 12px;
+                color: #fff;
+                margin: 0;
+                text-align: center;
+                padding: 0 50px;
+            }
+            a, button{
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+
+                svg{}
+            }
+        }
+    }
+
+    @media (max-width: 1200px){
+        >.content{
+            .top_content{
+                .pages{
+                    width: calc(100% - 230px);
+                }
+            }
+            .botton_content{
+                gap: 30px;
+                .left{
+                    width: 100%;
+                    justify-content: center;
+                    gap: 20px;
+                }
+                .right{
+                    width: 100%;
+                    justify-content: center;
+                    gap: 40px;
+                }
+            }
+        }
+    }
+    @media (max-width: 1000px){
+        padding: 60px 0 0;
+
+        >.content{
+            .top_content{
+                justify-content: center;
+                gap: 30px;
+
+                .pages{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @media (max-width: 750px){
+        padding: 50px 0 0;
+
+        >.content{
+            .top_content{
+                justify-content: flex-end;
+                padding: 0;
+
+                .pages{
+                    flex-wrap: wrap;
+
+                    .contact{
+                        padding: 30px 0 0;
+                        width: 100%;
+                    }
+                }
+                >a, >button{
+                    margin: -110px 0 0;
+                }
+            }
+            .botton_content{
+                .left{
+                    flex-wrap: wrap;
+                }
+            }
+        }
+        .privacy_policy{
+            .content{
+                p{
+                    width: 100%;
+                    text-align: left;
+                    padding: 0 60px 0 0;
+                }
+            }
+        }
+    }
+    @media (max-width: 550px){
+        margin: 0 0 50px;
+
+        >.content{
+            .top_content{
+                gap: 15px;
+                padding: 0 0 50px;
+
+                .pages{
+                    justify-content: flex-end;
+                    gap: 20px;
+
+                    >div{
+                        width: 100%;
+                        h2{
+                        }
+                        a, button{
+                        }
+                    }
+                    .contact{
+                        padding: 0;
+                        width: initial;
+
+                        a, button{
+                            h3{
+                            }
+                            span{
+                                svg{
+                                }
+                            }
+                        }
+                    }
+                }
+                >a, >button{
+                    margin: 0;
+                }
+            }
+            .botton_content{
+                .left{
+                    img{
+                        &.uniauto{
+                            width: 191px;
+                        }
+                        &.fan{
+                            width: 154px;
+                        }
+                        &.aaapv{
+                            width: 75px;
+                        }
+                    }
+                }
+                .right{
+                    flex-wrap: wrap;
+                    gap: 30px;
+
+                    .store{
+                        width: 100%;
+
+                        a, button{
+                            img{}
+                        }
+                    }
+                    .social{
+                        a, button{
+                            svg{}
+                        }
+                    }
+                }
+            }
+        }
+        .privacy_policy{
+            position: relative;
+            padding: 11px 0 30px;
+
+            .content{
+                position: initial;
+
+                p{
+                    padding: 0;
+                    font-size: 9px;
+                    text-align: center;
+                }
+                a, button{
+                    left: 50%;
+                    right: initial;
+                    bottom: 5px;
+                    top: initial;
+                    transform: translateX(-50%);
+
+                    svg{}
+                }
+            }
+        }
+    }
+}

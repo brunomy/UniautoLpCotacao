@@ -1,0 +1,117 @@
+header{
+    background: #fff;    
+    
+    nav{
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px 0;
+
+        .content{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            >div{
+                width: 625px;
+                display: flex;
+                justify-content: space-between;
+
+                .logo{
+                    img{}
+                }
+                .beneficio{
+                    img{}
+                }
+            }
+            a{
+                width: 225px;
+                height: 50px;
+                padding: 0;
+                background: #008645;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 11px;
+                border-radius: 40px;
+
+                img{}
+                span{
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 13px;
+                    color: #fff;
+                    line-height: 0;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 950px){
+        nav{
+            padding: 30px 0;
+
+            .content{
+                >div{
+                    width: 465px;
+
+                    .logo{
+                        img{
+                            width: 205px;
+                        }
+                    }
+                    .beneficio{
+                        img{
+                            width: 202px;
+                        }
+                    }
+                }
+                a{
+                    width: 195px;
+                    height: 41px;
+                    gap: 9px;
+                }
+            }
+        }
+    }
+    @media (max-width: 750px){
+        nav{
+            .content{
+                >div{
+                    width: 100%;
+                }
+                a{
+                    position: fixed;
+                    bottom: 10px;
+                    right: 10px;
+                    z-index: 100;
+                }
+            }
+        }
+    }
+    @media (max-width: 550px){
+        nav{
+            .content{
+                >div{
+                    .logo{
+                        img{
+                            width: 150px;
+                        }
+                    }
+                    .beneficio{
+                        img{
+                            width: 138px;
+                        }
+                    }
+                }
+                a{
+                    bottom: 0;
+                    right: 0;
+                    width: 100%;
+                    border-radius: 0;
+                    height: 50px;
+                }
+            }
+        }
+    }
+}

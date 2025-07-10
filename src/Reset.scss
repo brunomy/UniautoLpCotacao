@@ -1,0 +1,93 @@
+/* reset.scss */
+
+/* Box sizing reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove margens e paddings padrão */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove decoração de links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove estilo de lista */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove bordas e estilos padrão de botões e inputs */
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* Previne animações automáticas em preferências de acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Altura total e fonte base */
+html,
+body {
+  height: 100%;
+  font-family: system-ui, sans-serif;
+  background-color: #fff;
+  color: #000;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  align-items: flex-start;
+}
+
+/* Imagens responsivas */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Tabelas sem espaçamento */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
