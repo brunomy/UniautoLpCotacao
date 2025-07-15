@@ -54,14 +54,14 @@ export default function Home() {
             <Box className="links">
                 <Box>
                     <img src={protecaoCarro} />
-                    <Button onClick={() => { setVehicleType(1); setOpen(true); }}>
+                    <Button component={Link} to="/proteger-carro" onClick={() => { setVehicleType(1); setOpen(true); }}>
                         <span className="text">Clique aqui para proteger seu carro</span>
                         <SvgIcons icon="hand" />
                     </Button>
                 </Box>
                 <Box>
                     <img src={protecaoMoto} />
-                    <Button onClick={() => { setVehicleType(2); setOpen(true); }}>
+                    <Button component={Link} to="/proteger-moto" onClick={() => { setVehicleType(2); setOpen(true); }}>
                         <span className="text">Clique aqui para proteger sua moto</span>
                         <SvgIcons icon="hand" />
                     </Button>
@@ -190,7 +190,7 @@ function Form({ open, setOpen, vehicleType }) {
     
         const payload = {
             companyHash: 'unipv br4sil152',
-            formCode: 'AGj7RjON',
+            formCode: 'KQBA80OE',
             pipelineColumn: '1',
             leadSource: '18609',
             clientName: form.nome,

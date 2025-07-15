@@ -21,7 +21,7 @@ export default function Header() {
                             <img src={beneficio} alt="Benefício Social Familiar" />
                         </Box>
                     </Box>
-                    <Button component={Link} target="_blank" to="https://wa.me/556298646712?text=Olá,%20venho%20através%20do%20site,%20quero%20tirar%20algumas%20dúvidas.">
+                    <Button component={Link} target="_blank" to="https://wa.me/5562981600067?text=Olá,%20venho%20através%20do%20site,%20quero%20tirar%20algumas%20dúvidas.">
                         <img src={whatsapp} />
                         <span>tire suas dúvidas</span>
                     </Button>

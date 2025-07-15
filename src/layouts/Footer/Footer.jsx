@@ -39,10 +39,6 @@ export default function Footer() {
                                 <h3>Assistência 24h</h3>
                                 <span><SvgIcons icon="phone"/>0800 940 0587</span>
                             </Button>
-                            <Button className="phone" component={Link} to="tel:6230942905">
-                                <h3>Fale conosco</h3>
-                                <span><SvgIcons icon="phone"/>(62) 3094-2905</span>
-                            </Button>
                         </Box>
                     </Box>
                     <Button component={Link} target="_blank" to="https://abertura.veico.com.br/uniauto">Comunicar evento</Button>
