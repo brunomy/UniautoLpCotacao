@@ -190,7 +190,7 @@ function Form({ open, setOpen, vehicleType }) {
     
         const payload = {
             companyHash: 'unipv br4sil152',
-            formCode: 'KQBA80OE',
+            formCode: vehicleType === 1 ? 'KQBA80OE' : 'dlmvYgGz',
             pipelineColumn: '1',
             leadSource: '18609',
             clientName: form.nome,
@@ -209,11 +209,27 @@ function Form({ open, setOpen, vehicleType }) {
             method: 'POST',
             body: JSON.stringify(payload),
             headers: { 'Content-Type': 'application/json' },
+            redirected: true
         });
 
         const json = await res.json();
         if (json.success) {
             setForm({ ...form, nome: '', email: '', telefone: '', placa: '' });
+            if (json.redirecTo) {
+                window.location.href = json.redirecTo; // link externo
+            } else if (json.isPlan > 0) {
+                if (json.isPlan == 1) {
+                if (json.specificTable || json.planPriority == 2) {
+                    window.location.href = `https://app.powercrm.com.br/newQuotation?h=${json.qttnCd}`;
+                } else {
+                    window.location.href = `https://app.powercrm.com.br/compareTables?h=${json.qttnCd}`;
+                }
+                } else {
+                    window.location.href = `https://app.powercrm.com.br/receivedQuotation?h=${json.qttnCd}`;
+                }
+            } else {
+                window.location.href = `https://app.powercrm.com.br/noPlan?h=${json.qttnCd}`;
+            }
         } else {
             alert(json.message || 'Erro ao enviar');
         }
