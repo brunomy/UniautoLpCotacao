@@ -33,8 +33,10 @@ export default function Home() {
     const [vehicleType, setVehicleType] = useState(0);
 
     const path = window.location.pathname;
-    const slug = path.split("/")[1]; 
+    const slug = path.split("/").filter(Boolean).pop(); 
     useEffect(() => {
+        console.log('slug', slug);
+        
         if(slug == 'proteger-carro'){
             setVehicleType(1);
             setOpen(true);
@@ -53,16 +55,16 @@ export default function Home() {
             </Box>
             <Box className="links">
                 <Box>
-                    <img src={protecaoCarro} />
-                    <Button component={Link} to="/proteger-carro" onClick={() => { setVehicleType(1); setOpen(true); }}>
-                        <span className="text">Clique aqui para proteger seu carro</span>
+                    <img src={protecaoMoto} />
+                    <Button component={Link} to="/beneficiosocialfamiliar/proteger-moto" onClick={() => { setVehicleType(2); setOpen(true); }}>
+                        <span className="text">Clique aqui para proteger sua moto</span>
                         <SvgIcons icon="hand" />
                     </Button>
                 </Box>
                 <Box>
-                    <img src={protecaoMoto} />
-                    <Button component={Link} to="/proteger-moto" onClick={() => { setVehicleType(2); setOpen(true); }}>
-                        <span className="text">Clique aqui para proteger sua moto</span>
+                    <img src={protecaoCarro} />
+                    <Button component={Link} to="/beneficiosocialfamiliar/proteger-carro" onClick={() => { setVehicleType(1); setOpen(true); }}>
+                        <span className="text">Clique aqui para proteger seu carro</span>
                         <SvgIcons icon="hand" />
                     </Button>
                 </Box>
